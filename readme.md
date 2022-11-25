@@ -3,6 +3,15 @@
 
 `from PIL import Image`
 
+`import random`
+
+# 图片处理思路
+1. 当每个类别的数据量大于`IMG_NUM_EACH_TYPE`的时候，只进行resize变化。
+2. 当每个类别的数据量小于`IMG_NUM_EACH_TYPE`的时候，对每一个图片进行 随机切分，随机切分后水平镜像，随机切分后上下镜像（三种变化）。直至到达`IMG_NUM_EACH_TYPE`，或所有原始图片变化完毕。
+
+![crop](https://github.com/lantianzhidian/AI_teamwork_datapreprocessing/blob/main/521FECEE-DAF3-458E-A7A4-102FD2B41D04.jpeg "crop")
+
+
 # 用法指南
 
 >注意：只需修改`definitions.py`中的变，`main.py`不用修改。
